@@ -306,7 +306,8 @@ unsigned int ddr_wakeup_check_code[] =
     #include DDR_WAKEUP_SRC
 };
 
-extern int (* ca_pm_suspend)(HI_VOID *sramAddr, int length);
+//extern int (* ca_pm_suspend)(HI_VOID *sramAddr, int length);
+static int (* ca_pm_suspend)(HI_VOID *sramAddr, int length);
 
 int locate_ca_pm_suspend(HI_VOID *sramAddr, int length)
 {

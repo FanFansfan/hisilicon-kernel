@@ -443,7 +443,7 @@ void invalidate_dcache_all(void)
  * This function needs to be inline to avoid using stack.
  * __asm_flush_l3_dcache return status of timeout
  */
-inline void flush_dcache_all(void)
+static inline void flush_dcache_all(void)
 {
 	int ret;
 
@@ -601,7 +601,7 @@ void invalidate_dcache_all(void)
 {
 }
 
-void flush_dcache_all(void)
+static inline void flush_dcache_all(void)
 {
 }
 
